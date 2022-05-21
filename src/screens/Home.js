@@ -12,9 +12,8 @@ import {
   
 } from "react-native-rapi-ui";
 
-import { List,IconButton } from 'react-native-paper';
-import BigList from "react-native-big-list";
-import Icon from 'react-native-vector-icons/Entypo'
+
+import AssetTable from './AssetTable';
 const fontFamily =  'Avenir' 
 
 export default function ({ navigation }) {
@@ -45,55 +44,6 @@ export default function ({ navigation }) {
     /* ... */
   ];
 
-  function checkFavorite(val){
-    if(val==1){
-     return "star"
-    }else{
-      return "star-outline"
-    }
-  }
-
-  function changeFavoriteValue(val){
-    Alert.alert('ddd'+ val)
-    console.log(data[0])
-    if(val==1){
-     
-      return 0
-     }else{
-      
-       return 1
-     }
-  }
-
-  const renderItem = ({ item, index }) => (
-    <List.Item
-    style={styles.item}
-    titleStyle={styles.itemTitle}
-    descriptionStyle={styles.itemDesc}
-    title={item.label}
-    description={item.date}
-    
-    right={props =><IconButton
-    style={styles.itemStar}
-      icon= { checkFavorite(item.favorite)}
-      color='#fcba03'
-      size={22}
-      onPress={() => item.favorite=changeFavoriteValue(item.favorite)}
-    />
-    
-    }
-    left={props => <Image
-      style={styles.tinyLogo}
-      source={{
-        uri: 'https://artscene.ru/storage/app/public/uploads/assets/88-111.jpg',
-      }}
-    />}
-    onPress={() => Alert.alert('Current version is not support this function')}
-  />
-  );
-  const renderEmpty = () => <Text>Empty</Text>;
-  const renderHeader = () => <Text style={{backgroundColor:'red'}}>Header</Text>;
- 
 
   return (
     <Layout>
@@ -104,16 +54,10 @@ export default function ({ navigation }) {
           
         }}
       >
-         <BigList
-    data={data}
-    renderItem={renderItem}
-    renderEmpty={renderEmpty}
-    renderHeader={renderHeader}
-   
-    itemHeight={85} // Required (default 0)
-    headerHeight={90} // Required to show header
-    footerHeight={100} // Required to show footer
-  />
+        <AssetTable
+        data={data}
+        styles={styles}
+        ></AssetTable>
       </View>
     </Layout>
   );
