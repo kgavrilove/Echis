@@ -81,7 +81,7 @@ const changeTheme = () => {
 		<SettingsList  defaultItemSize={50} underlayColor='black' borderColor='#c8c7cc' >
 		<SettingsList.Header headerText='APP' 
 		 headerStyle={{
-			color : isDarkmode ? themeColor.white100 : "black",
+			color : '#999',
 			fontFamily,
 		textTransform:'uppercase',
 		fontSize: 16,
@@ -179,7 +179,7 @@ const changeTheme = () => {
           
           <SettingsList.Header headerText='Notifications'
 		  headerStyle={{
-			color : isDarkmode ? themeColor.white100 : "black",
+			color : '#999',
 			fontFamily,
 		textTransform:'uppercase',
 		fontSize: 16,
@@ -210,7 +210,7 @@ const changeTheme = () => {
           
           <SettingsList.Header headerText='Account' 
 		   headerStyle={{
-			color : isDarkmode ? themeColor.white100 : "black",
+			color : '#999',
 			fontFamily,
 		textTransform:'uppercase',
 		fontSize: 16,

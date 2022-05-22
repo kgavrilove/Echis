@@ -9,6 +9,7 @@ import {
   Section,
   SectionContent,
   useTheme,
+  themeColor ,
   
 } from "react-native-rapi-ui";
 
@@ -19,6 +20,10 @@ const fontFamily =  'Avenir'
 export default function ({ navigation }) {
   const { isDarkmode, setTheme } = useTheme();
   const auth = getAuth();
+
+
+
+
 
   const data = [
     { label: "name of asset", value: 1 , date: "01.11.2020",favorite:1/* ... */ },
@@ -57,6 +62,8 @@ export default function ({ navigation }) {
         <AssetTable
         data={data}
         styles={styles}
+        isDarkmode={isDarkmode}
+        
         ></AssetTable>
       </View>
     </Layout>

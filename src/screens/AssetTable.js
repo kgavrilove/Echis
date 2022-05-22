@@ -23,20 +23,24 @@ export default class AssetTable extends React.Component {
         super(props);
         data=props.data;
         styles=props.styles;
+        
         this.renderItem = this.renderItem.bind(this);
         this.renderEmpty = this.renderEmpty.bind(this);
         this.renderHeader = this.renderHeader.bind(this);
         this.checkFavorite=this.checkFavorite.bind(this);
         this.changeFavoriteValue=this.changeFavoriteValue.bind(this);
         this.state = {
-          data: props.data
+          data: props.data,
+          isDarkmode:props.isDarkmode,
         };
         
       }
 
 
+      
    checkFavorite(val){
     if(val==1){
+      
      return "star"
     }else{
       return "star-outline"
@@ -47,7 +51,7 @@ export default class AssetTable extends React.Component {
     
     console.log(val)
     if(val==1){
-      
+      Alert.alert();
       return 0
      }else{
       
@@ -58,8 +62,18 @@ export default class AssetTable extends React.Component {
   renderItem = ({ item, index }) => (
     <List.Item
     style={styles.item}
-    titleStyle={styles.itemTitle}
-    descriptionStyle={styles.itemDesc}
+    titleStyle={[
+      styles.itemTitle, {
+        color : this.state.isDarkmode ? 'white' :"black" ,
+    }
+  ]}
+    descriptionStyle={[
+      styles.itemDesc,
+      {
+        color : this.state.isDarkmode ?'white'  :"black" ,
+      }
+      
+  ]}
     title={item.label}
     description={item.date}
     
