@@ -17,6 +17,7 @@ import TermsAndConditionsScreen from "../screens/Info/TermsAndConditionsScreen"
 import About from "../screens/About";
 import Profile from "../screens/Profile";
 import Loading from "../screens/utils/Loading";
+import MansoryScreen from "../MansoryScreen";
 // Auth screens
 import Login from "../screens/auth/Login";
 import Register from "../screens/auth/Register";
@@ -94,10 +95,22 @@ const MainTabs = () => {
         component={Home}
         options={{
           tabBarLabel: ({ focused }) => (
-            <TabBarText focused={focused} title="Home" />
+            <TabBarText focused={focused} title="List" />
           ),
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} icon={"md-home"} />
+            <TabBarIcon focused={focused} icon={"list-outline"} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Mansory"
+        component={MansoryScreen}
+        options={{
+          tabBarLabel: ({ focused }) => (
+            <TabBarText focused={focused} title="Mansory" />
+          ),
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon focused={focused} icon={"ios-apps-sharp"} />
           ),
         }}
       />
@@ -109,7 +122,7 @@ const MainTabs = () => {
             <TabBarText focused={focused} title="Landing" />
           ),
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} icon={"person"} />
+            <TabBarIcon focused={focused} icon={"ios-albums"} />
           ),
         }}
       />

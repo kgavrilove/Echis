@@ -89,7 +89,34 @@ itemStar:{
   alignSelf:'center',
 		
 		marginLeft: 20,
-}
+},
+header:{
+  backgroundColor:'white',
+  bordercolor:'red',
+  
+  borderWidth:0,
+  margin:20,
+  borderRadius:25,
+  flex:1,
+  flexDirection:'row',
+  
+  justifyContent:'space-between',
+  alignItems: 'center',
+    
+},
+headerLogo:{
+  
+},
+logo:{
+
+},
+headerRightButton:{
+ 
+  
+},
+headerRightButtonIcon:{
+
+},
 	  
   })
   

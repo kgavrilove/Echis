@@ -28,6 +28,7 @@ export default class AssetTable extends React.Component {
         this.renderEmpty = this.renderEmpty.bind(this);
         this.renderHeader = this.renderHeader.bind(this);
         this.checkFavorite=this.checkFavorite.bind(this);
+        
         this.changeFavoriteValue=this.changeFavoriteValue.bind(this);
         this.state = {
           data: props.data,
@@ -35,7 +36,6 @@ export default class AssetTable extends React.Component {
         };
         
       }
-
 
       
    checkFavorite(val){
@@ -103,7 +103,28 @@ export default class AssetTable extends React.Component {
   />
   );
  renderEmpty = () => <Text>Empty</Text>;
-  renderHeader = () => <Text style={{backgroundColor:'red'}}>Header</Text>;
+  renderHeader = () => 
+  <View style={styles.header}>
+    <View style={styles.headerLogo}>
+    <IconButton
+    style={styles.logo}
+      icon= "star" 
+      color='#fcba03'
+      size={30}
+      onPress={() => { } }
+    />
+    </View>
+    <View style={styles.headerRightButton}>
+   
+    <IconButton
+    style={styles.headerRightButtonIcon}
+      icon= "filter" 
+      color='#fcba03'
+      size={35}
+      onPress={() => { Alert.alert('al')} }
+    />
+    </View>
+  </View>;
 
 render(){
   return (
