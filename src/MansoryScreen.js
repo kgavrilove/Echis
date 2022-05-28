@@ -854,7 +854,7 @@ data=[
           
           initialNumInColsToRender={10}
           listContainerStyle={{marginTop: 50}}
-          onPressImage={() => Alert.alert('Current version is not support this function')}
+          onPressImage={() => navigation.navigate("AssetScreen")}
           backgroundColor={isDarkmode ? "#262834" : themeColor.white100}
           emptyView={<Text>Empty</Text>}
         />

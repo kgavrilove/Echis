@@ -25,6 +25,7 @@
     "react-dom": "17.0.2",
     "react-native": "0.68.2",
     "react-native-big-list": "^1.5.4",
+    "react-native-image-zoom-viewer": "^3.0.1",
     "react-native-masonry-list": "^2.16.1",
     "react-native-paper": "^4.12.1",
     "react-native-rapi-ui": "^0.2.1",

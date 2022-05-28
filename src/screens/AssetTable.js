@@ -99,7 +99,7 @@ export default class AssetTable extends React.Component {
         uri: 'https://artscene.ru/storage/app/public/uploads/assets/88-111.jpg',
       }}
     />}
-    onPress={() => Alert.alert('Current version is not support this function')}
+    onPress={() => navigation.navigate("AssetScreen")}
   />
   );
  renderEmpty = () => <Text>Empty</Text>;

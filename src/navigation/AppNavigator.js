@@ -14,6 +14,9 @@ import SecondScreen from "../screens/SecondScreen";
 import AboutScreen from "../screens/Info/AboutScreen"
 import PrivatePolicyScreen from "../screens/Info/PrivatePolicyScreen"
 import TermsAndConditionsScreen from "../screens/Info/TermsAndConditionsScreen"
+import AssetScreen from "../screens/Asset/AssetScreen"
+import AssetLoupe from "../screens/Asset/AssetLoupeScreen"
+
 import About from "../screens/About";
 import Profile from "../screens/Profile";
 import Loading from "../screens/utils/Loading";
@@ -25,6 +28,7 @@ import ForgetPassword from "../screens/auth/ForgetPassword";
 import { AuthContext } from "../provider/AuthProvider";
 import Landing from "../screens/Landing";
 import Camera from "../screens/Camera";
+import AssetLoupeScreen from "../screens/Asset/AssetLoupeScreen";
 
 // Better put your these secret keys in .env file
 const firebaseConfig = {
@@ -69,6 +73,8 @@ const Main = () => {
       <MainStack.Screen name="AboutScreen" component={AboutScreen} />
       <MainStack.Screen name="PrivatePolicyScreen" component={PrivatePolicyScreen} />
       <MainStack.Screen name="TermsAndConditionsScreen" component={TermsAndConditionsScreen} />
+      <MainStack.Screen name="AssetScreen" component={AssetScreen} />
+      <MainStack.Screen name="AssetLoupeScreen" component={AssetLoupeScreen} />
     </MainStack.Navigator>
   );
 };
