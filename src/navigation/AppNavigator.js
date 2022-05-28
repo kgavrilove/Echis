@@ -89,11 +89,11 @@ const MainTabs = () => {
         tabBarStyle: {
           borderTopColor: isDarkmode ? themeColor.dark100 : "#c0c0c0",
           backgroundColor: isDarkmode ? themeColor.dark200 : "#ffffff",
+          
         },
-        tabBarOptions: {
-        activeTintColor: 'black',
-  },
+        
       }}
+      
     >
       {/* these icons using Ionicons */}
       <Tabs.Screen
@@ -105,7 +105,9 @@ const MainTabs = () => {
           ),
           tabBarIcon: ({ focused }) => (
             <TabBarIcon focused={focused} icon={"list-outline"} />
+            
           ),
+          
         }}
       />
       <Tabs.Screen

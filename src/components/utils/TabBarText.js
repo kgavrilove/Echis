@@ -10,7 +10,7 @@ export default (props) => {
         color: props.focused
           ? isDarkmode
             ? themeColor.white100
-            : themeColor.primary
+            : themeColor.black
           : "rgb(143, 155, 179)",
         fontSize: 10,
       }}
