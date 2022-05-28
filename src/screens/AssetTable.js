@@ -32,7 +32,7 @@ export default class AssetTable extends React.Component {
         this.changeFavoriteValue=this.changeFavoriteValue.bind(this);
         this.state = {
           data: props.data,
-          isDarkmode:props.isDarkmode,
+          isDarkmode:false,
         };
         
       }
@@ -51,15 +51,16 @@ export default class AssetTable extends React.Component {
     
     console.log(val)
     if(val==1){
-      Alert.alert();
+      Alert.alert('This version is not support favorites')
       return 0
      }else{
-      
+      Alert.alert('This version is not support favorites')
        return 1
      }
   }
 
   renderItem = ({ item, index }) => (
+    
     <List.Item
     style={styles.item}
     titleStyle={[
@@ -106,14 +107,14 @@ export default class AssetTable extends React.Component {
   );
  renderEmpty = () => <Text>Empty</Text>;
   renderHeader = () => 
-  <View style={styles.header}>
+  <View style={[styles.header,{backgroundColor:this.state.isDarkmode ? "#262834" : "#ffffff"}]}>
     <View style={styles.headerLogo}>
     <IconButton
     style={styles.logo}
       icon= "star" 
       color='#fcba03'
       size={30}
-      onPress={() => { } }
+      onPress={() => {Alert.alert('This version is not support favorites') } }
     />
     </View>
     <View style={styles.headerRightButton}>
@@ -121,14 +122,15 @@ export default class AssetTable extends React.Component {
     <IconButton
     style={styles.headerRightButtonIcon}
       icon= "filter" 
-      color='#fcba03'
+      color={this.state.isDarkmode ? "#ffffff" : "black"}
       size={35}
-      onPress={() => { Alert.alert('al')} }
+      onPress={() => { Alert.alert('This version is not support filtering')} }
     />
     </View>
   </View>;
 
 render(){
+  
   return (
     
          <BigList

@@ -80,7 +80,7 @@ const win = Dimensions.get('window');
       icon= "star-outline"
       color='#fcba03'
       size={30}
-      onPress={() => navigation.goBack() }
+      onPress={() => Alert.alert('This version is not support favorites') }
     />
 </View>
       <TouchableOpacity onPress={()=>navigation.navigate("AssetLoupeScreen") }>

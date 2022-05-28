@@ -63,7 +63,6 @@ export default function ({ navigation }) {
         navigation={navigation}
         data={data}
         styles={styles}
-        isDarkmode={isDarkmode}
         
         ></AssetTable>
       </View>
