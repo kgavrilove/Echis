@@ -99,7 +99,9 @@ export default class AssetTable extends React.Component {
         uri: 'https://artscene.ru/storage/app/public/uploads/assets/88-111.jpg',
       }}
     />}
-    onPress={() => navigation.navigate("AssetScreen")}
+    onPress={() => //Alert.alert(item.date)
+    this.props.navigation.navigate("AssetScreen",{itemData:item, IsMansory:0})
+    }
   />
   );
  renderEmpty = () => <Text>Empty</Text>;

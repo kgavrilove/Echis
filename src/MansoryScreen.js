@@ -851,10 +851,9 @@ data=[
           // containerWidth={300}
           images={data}
           onEndReachedThreshold={0.2}
-          
           initialNumInColsToRender={10}
           listContainerStyle={{marginTop: 50}}
-          onPressImage={() => navigation.navigate("AssetScreen")}
+          onPressImage={(item) => navigation.navigate("AssetScreen",{itemData:{item}, IsMansory:1})}
           backgroundColor={isDarkmode ? "#262834" : themeColor.white100}
           emptyView={<Text>Empty</Text>}
         />

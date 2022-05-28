@@ -60,7 +60,7 @@ export default function ({ navigation }) {
         }}
       >
         <AssetTable
-        nav={navigation}
+        navigation={navigation}
         data={data}
         styles={styles}
         isDarkmode={isDarkmode}

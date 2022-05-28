@@ -24,12 +24,14 @@ import { IconButton } from 'react-native-paper';
 import { Dimensions } from 'react-native';
 import ImageZoom from 'react-native-image-pan-zoom';
 
-export default function ({ navigation }) {
+export default function ({ route,navigation }) {
   
+    const {itemData, IsMansory}=route.params;
+
   const { isDarkmode } = useTheme();
 
   const [width, setWidth] = useState('');
- 
+  
   const [height, setHeight] = useState('');
   var imageURL = 'https://artscene.ru/storage/app/public/uploads/assets/88-111.jpg';
 
@@ -100,7 +102,9 @@ const win = Dimensions.get('window');
         <View style={styles.info}>
         
         <Text style={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            ==={JSON.stringify(IsMansory)}==
+           === {JSON.stringify(itemData)}
+           ======Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
